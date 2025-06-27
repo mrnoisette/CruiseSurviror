@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.339441
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.570152
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       propertyPath: m_LocalRotation.w
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: 8e0f5bf8112c0f3479dfab50c6d2b24b, type: 2}
+  Animator: {fileID: 1981851846078030227}
 --- !u!114 &2207974156158140169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,4 +181,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 6677296965666705519}
   _rigidbody: {fileID: 5672376130177160277}
-  _animator: {fileID: 1981851846078030227}
