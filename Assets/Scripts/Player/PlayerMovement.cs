@@ -6,14 +6,13 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] public Player Player;
 
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private Animator _animator;
 
     void Update() {
 
         bool isMoving = EnDeplacement();
 
         // Animations
-        _animator.SetBool("isMoving", isMoving);
+        Player.Animator.SetBool("isMoving", isMoving);
 
         // Regard
         if (isMoving) {
