@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
             Quaternion rotation = Quaternion.Euler(0f, input_orientation * ForceRotation * Time.fixedDeltaTime, 0f);
             _rb_player.MoveRotation(_rb_player.rotation * rotation);
         }
-
+        // test
         // Appliquer un frein l�ger
         _rb_player.linearVelocity *= Freinage;
         _rb_player.angularVelocity *= Freinage;
