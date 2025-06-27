@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Player_PlayerStats
   m_EditorClassIdentifier: 
   Health: 100
+  Xp: 1
   Strenght: 50
   MoveSpeed: 10

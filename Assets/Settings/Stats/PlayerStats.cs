@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject {
 
     public int Health;
+    public int Xp;
     public int Strenght;
     public int MoveSpeed;
 
