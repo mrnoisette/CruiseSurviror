@@ -9,6 +9,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private Slider _slider_Health;
     [SerializeField] private Slider _slider_XP;
     [SerializeField] private TextMeshProUGUI _txt_Level;
+    [SerializeField] private TextMeshProUGUI _txt_Chrono;
 
     void Start()
     {
@@ -21,5 +22,6 @@ public class UI_Manager : MonoBehaviour
         _slider_Health.value = _player.Stats.Health;
         _slider_XP.value = _player.Stats.Xp;
         _txt_Level.text = $"Level : {_player.Stats.Xp.ToString()}";
+        _txt_Chrono.text = Time.realtimeSinceStartup.ToString();
     }
 }

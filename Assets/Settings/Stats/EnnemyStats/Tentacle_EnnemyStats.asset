@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 716eb1a02f517c14dae8c6f246be48e1, type: 3}
-  m_Name: Skeleton_EnnemyStats
+  m_Name: Tentacle_EnnemyStats
   m_EditorClassIdentifier: 
-  Health: 20
-  Strength: 5
-  MoveSpeed: 5
-  AttackSpeed: 1.5
-  AttackRange: 1
+  Health: 80
+  Strength: 20
+  MoveSpeed: 1
+  AttackSpeed: 3
+  AttackRange: 2.5
