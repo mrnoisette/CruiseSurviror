@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
         bool isMoving = EnDeplacement();
 
         // Animations
-        Player.Animator.SetBool("isMoving", isMoving);
+        Player.Animator.SetBool("isMoving", EnDeplacement());
 
         // Regard
         if (isMoving) {

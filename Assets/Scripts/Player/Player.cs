@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         Animator.SetBool("isDead", true);
 
 #if UNITY_EDITOR
-        // UnityEditor.EditorApplication.isPlaying = false;
+         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
 }

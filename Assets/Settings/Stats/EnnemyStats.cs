@@ -4,8 +4,9 @@ using UnityEngine;
 public class EnnemyStats : ScriptableObject {
 
     public int Health;
-    public int Strenght;
+    public int Strength;
     public int MoveSpeed;
-    public float Range;
+    public float AttackSpeed;
+    public float AttackRange;
 
 }
