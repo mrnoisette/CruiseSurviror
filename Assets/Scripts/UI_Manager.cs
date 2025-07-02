@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,6 @@ public class UI_Manager : MonoBehaviour
         _slider_Health.value = _player.Stats.Health;
         _slider_XP.value = _player.Stats.Xp;
         _txt_Level.text = $"Level : {_player.Stats.Xp.ToString()}";
-        _txt_Chrono.text = Time.realtimeSinceStartup.ToString();
+        _txt_Chrono.text = Math.Round(Time.timeSinceLevelLoad,2).ToString();
     }
 }

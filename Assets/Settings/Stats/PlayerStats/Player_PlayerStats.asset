@@ -15,4 +15,4 @@ MonoBehaviour:
   Health: 100
   Xp: 1
   Strenght: 50
-  MoveSpeed: 10
+  MoveSpeed: 5
