@@ -2,9 +2,7 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
-/projectSettingsUpdater.xml
 /.idea.CruiseSurviror.iml
-/contentModel.xml
 /modules.xml
 # Editor-based HTTP Client requests
 /httpRequests/

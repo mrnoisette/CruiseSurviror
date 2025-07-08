@@ -3,7 +3,6 @@
 /workspace.xml
 # Rider ignored files
 /contentModel.xml
-/modules.xml
 /.idea.CruiseSurviror.iml
 /projectSettingsUpdater.xml
 # Editor-based HTTP Client requests
