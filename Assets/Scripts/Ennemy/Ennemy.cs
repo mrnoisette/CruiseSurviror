@@ -1,20 +1,17 @@
 using UnityEngine;
 
-public class Ennemy : MonoBehaviour
-{
+public class Ennemy : MonoBehaviour {
     public EnnemyStats Stats;
 
     [SerializeField] Animator _animator;
 
     [SerializeField] private Player _player;
 
-    void Start()
-    {
+    void Start() {
         Stats = Instantiate(Stats);
     }
 
-    void Update()
-    {
+    void Update() {
         // On a la direction (vers où aller)
         Vector3 direction = _player.transform.position - transform.position;
 
@@ -24,13 +21,11 @@ public class Ennemy : MonoBehaviour
         var distance = Vector3.Distance(transform.position, _player.transform.position);
 
         // Déplacement
-        if (distance > Stats.AttackRange)
-        {
+        if (distance > Stats.AttackRange) {
             _animator.SetBool("isMoving", true);
             transform.position += Time.deltaTime * Stats.MoveSpeed * direction.normalized;
-        }
-        else // Attack
-        {
+        } else // Attack
+          {
             Attaquer();
         }
 
@@ -39,15 +34,13 @@ public class Ennemy : MonoBehaviour
 
 
     private float _lastAttackTime = 0f;
-    private void Attaquer()
-    {
-        if (_lastAttackTime > Time.time)
-        {
+    private void Attaquer() {
+        if (_lastAttackTime > Time.time) {
             // Limite la fréquence d'attaque
             return;
         }
 
-        _lastAttackTime = Time.time + Stats.AttackRange;
+        _lastAttackTime = Time.time + Stats.AttackSpeed;
 
         _animator.SetBool("isAttacking", true);
         _player.Stats.Health -= Stats.Strength;
