@@ -32,5 +32,21 @@ public class Aura : MonoBehaviour {
         // Rotation des requins autour de l'axe (la tete doit suivre l'axe)
         // Infliger des dégats au tag 'Ennemy'
 
+
+
+
+
     }
+
+    private void AppliquerDegatZone() {
+
+        var colliders = Physics.OverlapSphere(transform.position, Diametre);
+        foreach (var collider in colliders) {
+            if (collider.CompareTag("Ennemy")) { // Ennemy dans la zone
+                
+            }
+        }
+
+    }
+
 }
