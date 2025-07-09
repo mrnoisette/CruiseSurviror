@@ -12,7 +12,7 @@ public class Ennemy : MonoBehaviour {
     }
 
     void Update() {
-        // On a la direction (vers où aller)
+        // Vecteur de déplacement vers le joueur 
         Vector3 direction = _player.transform.position - transform.position;
 
         // Vers où regarder
@@ -30,16 +30,23 @@ public class Ennemy : MonoBehaviour {
         }
 
         _animator.SetBool("isAttacking", _lastAttackTime > Time.time);
+
+        if (Stats.Health <= 0) { // Mourrir
+            _animator.SetBool("isDead", true);
+        }
+
     }
 
+    public void Event_Mort() {
+        Destroy(gameObject);
+    }
 
     private float _lastAttackTime = 0f;
     private void Attaquer() {
-        if (_lastAttackTime > Time.time) {
+        if (Time.time < _lastAttackTime) {
             // Limite la fréquence d'attaque
             return;
         }
-
         _lastAttackTime = Time.time + Stats.AttackSpeed;
 
         _animator.SetBool("isAttacking", true);

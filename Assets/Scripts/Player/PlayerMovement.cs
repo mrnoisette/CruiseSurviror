@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] public Player Player;
-
     [SerializeField] private Rigidbody _rigidbody;
 
     void Update() {
@@ -19,11 +18,11 @@ public class PlayerMovement : MonoBehaviour {
             transform.rotation = Quaternion.LookRotation(_rigidbody.linearVelocity);
         }
 
-        // On applique à la vélocité du joueur
-        _rigidbody.linearVelocity = new Vector3(
-            Player.Stats.MoveSpeed * Input.GetAxis("Horizontal"),
-            _rigidbody.linearVelocity.y,
-            Player.Stats.MoveSpeed * Input.GetAxis("Vertical")); ;
+        // On applique à la vélocité du joueur (normalisée car ca allait plus vite en diagonale)
+        var direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        direction.Normalize();
+
+        _rigidbody.linearVelocity = direction * Player.Stats.MoveSpeed;
 
     }
 

@@ -39,15 +39,15 @@ public class Aura : MonoBehaviour {
     private float _lastAttackTime = 0f;
     private void AppliquerDegatZone() {
 
+        if (Time.time < _lastAttackTime) {
+            // Limite la fréquence d'attaque
+            return;
+        }
+        _lastAttackTime = Time.time + AttackSpeed;
+
         var colliders = Physics.OverlapSphere(transform.position, Diametre);
         foreach (var collider in colliders) {
             if (collider.CompareTag("Ennemy")) { // Ennemy dans la zone
-
-                if (_lastAttackTime > Time.time) {
-                    // Limite la fréquence d'attaque
-                    return;
-                }
-                _lastAttackTime = Time.time + AttackSpeed;
 
                 // On applique les dégats à l'ennemy
                 collider.GetComponent<Ennemy>().Stats.Health -= (int)Degat;
