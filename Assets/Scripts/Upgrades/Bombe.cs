@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Bombe : MonoBehaviour {
@@ -8,13 +7,28 @@ public class Bombe : MonoBehaviour {
 
     public float DiametreExplosion;
     public float Degat;
-    public float Frequence; 
+    public float FrequenceSpawn;
 
-    void Start() {
-        var instanceRequin = Instantiate(_bombe_Prefab, _player.transform);
-    }
-
+    private float _spawnTimer;
     void Update() {
 
+        // Spawner
+        _spawnTimer += Time.deltaTime;
+        if (_spawnTimer >= FrequenceSpawn) {
+            BombSpawner();
+            _spawnTimer = 0f;
+        }
+
     }
+
+    private void BombSpawner() {
+        Vector3 spawnPosition = _player.transform.position + Vector3.up * 0.2f;
+        Quaternion rotation = _bombe_Prefab.transform.rotation; 
+        var bombe = Instantiate(_bombe_Prefab, spawnPosition, rotation);
+
+        // TODO : 
+        // - Faire peter la bombe (degats etc..)
+        // - La faire disparaitre après
+    }
+
 }

@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private float spawnInterval = 1f;
 
     private float _spawnTimer;
-
     void Update() {
 
         // Spawner

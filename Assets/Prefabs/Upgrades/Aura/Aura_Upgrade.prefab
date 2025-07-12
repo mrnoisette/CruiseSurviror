@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6371278283560157653}
   - component: {fileID: 4693560523942725979}
   m_Layer: 0
-  m_Name: Aura
+  m_Name: Aura_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

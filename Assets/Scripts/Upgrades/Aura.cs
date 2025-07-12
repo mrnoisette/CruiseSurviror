@@ -1,10 +1,10 @@
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Aura : MonoBehaviour {
 
     [SerializeField] private Player _player;
     [SerializeField] private GameObject _requin_Prefab;
+
     public float Diametre;
     public float Degat;
     public float AttackSpeed = 3f;
@@ -33,11 +33,11 @@ public class Aura : MonoBehaviour {
         // Rotation des requins autour du joueur
         // Rotation des requins autour de l'axe (la tete doit suivre l'axe)
 
-        AppliquerDegatZone();
+        InfligerDegat();
     }
 
     private float _lastAttackTime = 0f;
-    private void AppliquerDegatZone() {
+    private void InfligerDegat() {
 
         if (Time.time < _lastAttackTime) {
             // Limite la fréquence d'attaque
