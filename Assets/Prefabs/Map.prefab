@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 309041416687662979}
   - component: {fileID: 7187199540466466470}
   m_Layer: 0
-  m_Name: murs de Maria
+  m_Name: Murs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

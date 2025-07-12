@@ -6,6 +6,7 @@ public class Ennemy : MonoBehaviour {
     [SerializeField] Animator _animator;
 
     [SerializeField] private Player _player;
+    [SerializeField] private GameObject _collectableXp;
 
     void Start() {
         Stats = Instantiate(Stats);
@@ -39,7 +40,7 @@ public class Ennemy : MonoBehaviour {
 
     // Se déclenche à la fin de l'annimation de mort
     public void Event_Mort() {
-        SpawnXpOrb();
+        SpawnCollectableXp();
         Destroy(gameObject);
     }
 
@@ -56,8 +57,10 @@ public class Ennemy : MonoBehaviour {
     }
 
     // Fais spawn une orbe d'XP à sa mort
-    private void SpawnXpOrb() {
-
+    private void SpawnCollectableXp() {
+        Vector3 spawnPosition = transform.position + Vector3.up * 0.8f;
+        Quaternion rotation = _collectableXp.transform.rotation;
+        var xp = Instantiate(_collectableXp, spawnPosition, rotation);
     }
 
 

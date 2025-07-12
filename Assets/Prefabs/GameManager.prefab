@@ -45,6 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc0eb1ee57d64747ac3872747ef1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _tabEnnemy:
+  - {fileID: 0}
+  minSpawnDistance: 15
+  maxSpawnDistance: 30
+  spawnInterval: 3
 --- !u!82 &5655129834910203592
 AudioSource:
   m_ObjectHideFlags: 0
