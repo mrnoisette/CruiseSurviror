@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Aura : MonoBehaviour {
@@ -6,6 +7,7 @@ public class Aura : MonoBehaviour {
     [SerializeField] private GameObject _requin_Prefab;
     public float Diametre;
     public float Degat;
+    public float AttackSpeed = 3f;
     public float NbRequin;
 
     void Start() {
@@ -30,7 +32,31 @@ public class Aura : MonoBehaviour {
         // TODO : 
         // Rotation des requins autour du joueur
         // Rotation des requins autour de l'axe (la tete doit suivre l'axe)
-        // Infliger des dégats au tag 'Ennemy'
+
+        AppliquerDegatZone();
+    }
+
+    private float _lastAttackTime = 0f;
+    private void AppliquerDegatZone() {
+
+        if (Time.time < _lastAttackTime) {
+            // Limite la fréquence d'attaque
+            return;
+        }
+        _lastAttackTime = Time.time + AttackSpeed;
+
+        var colliders = Physics.OverlapSphere(transform.position, Diametre);
+        foreach (var collider in colliders) {
+            if (collider.CompareTag("Ennemy")) { // Ennemy dans la zone
+
+                // On applique les dégats à l'ennemy
+                collider.GetComponent<Ennemy>().Stats.Health -= (int)Degat;
+
+                // On rajoute des pv au player
+                _player.Stats.Health += (int)Degat;
+            }
+        }
 
     }
+
 }

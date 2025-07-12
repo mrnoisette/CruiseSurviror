@@ -115,7 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fb80f4ff7a13f41bc0500d6ee39340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cible: {fileID: 0}
+  _ennemy: {fileID: 5383873442024321137}
+  _camera: {fileID: 0}
+  _slider_Health: {fileID: 8238046579811572653}
 --- !u!1 &957736135889585867
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b40c3cdae46f88e4ca4234538fa20603, type: 3}
       propertyPath: m_Name
       value: Ennemy_Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b40c3cdae46f88e4ca4234538fa20603, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
