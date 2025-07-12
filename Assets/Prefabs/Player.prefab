@@ -79,9 +79,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2207974156158140169}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5229108029383746889}
   m_SourcePrefab: {fileID: 100100000, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
 --- !u!1 &9009091837695390337 stripped
 GameObject:
@@ -188,20 +185,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 6677296965666705519}
   _rigidbody: {fileID: 5672376130177160277}
---- !u!114 &5229108029383746889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009091837695390337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10cb74e4b90b6bb43a7d57717aa0ba1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 6677296965666705519}
-  _requin_Prefab: {fileID: 318461815814622372, guid: b46a250a86b3a634aaedab41dc322ea3, type: 3}
-  Diametre: 5
-  Degat: 5
-  NbRequin: 4

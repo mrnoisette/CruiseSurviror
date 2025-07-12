@@ -37,7 +37,9 @@ public class Ennemy : MonoBehaviour {
 
     }
 
+    // Se déclenche à la fin de l'annimation de mort
     public void Event_Mort() {
+        SpawnXpOrb();
         Destroy(gameObject);
     }
 
@@ -52,5 +54,11 @@ public class Ennemy : MonoBehaviour {
         _animator.SetBool("isAttacking", true);
         _player.Stats.Health -= Stats.Strength;
     }
+
+    // Fais spawn une orbe d'XP à sa mort
+    private void SpawnXpOrb() {
+
+    }
+
 
 }
