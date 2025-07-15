@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         var direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         direction.Normalize();
 
-        _rigidbody.linearVelocity = direction * Player.Stats.MoveSpeed;
+        _rigidbody.linearVelocity = direction * Player.MoveSpeed;
 
     }
 
@@ -38,8 +38,4 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    //private void OnTriggerEnter(Collider other) {
-    //    if (other.CompareTag("Collectable"))
-    //        Destroy(other.gameObject);
-    //}
 }

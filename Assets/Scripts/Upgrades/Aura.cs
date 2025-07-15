@@ -23,7 +23,7 @@ public class Aura : MonoBehaviour {
 
             // Instanciate en enfant du player
             var instanceRequin = Instantiate(_requin_Prefab, _player.transform);
-            instanceRequin.transform.position = position;
+            instanceRequin.transform.localPosition = position;
         }
     }
 
@@ -53,7 +53,7 @@ public class Aura : MonoBehaviour {
                 collider.GetComponent<Ennemy>().Stats.Health -= (int)Degat;
 
                 // On rajoute des pv au player
-                _player.Stats.Health += (int)Degat;
+                _player.Health += (int)Degat;
             }
         }
 

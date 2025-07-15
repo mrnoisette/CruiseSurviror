@@ -3,9 +3,8 @@ using UnityEngine;
 public class Ennemy : MonoBehaviour {
     public EnnemyStats Stats;
 
-    [SerializeField] Animator _animator;
-
-    [SerializeField] private Player _player;
+    [SerializeField] private Animator _animator;
+    public Player Player;
     [SerializeField] private GameObject _collectableXp;
 
     void Start() {
@@ -14,19 +13,18 @@ public class Ennemy : MonoBehaviour {
 
     void Update() {
         // Vecteur de déplacement vers le joueur 
-        Vector3 direction = _player.transform.position - transform.position;
+        Vector3 direction = Player.transform.position - transform.position;
 
         // Vers où regarder
         transform.rotation = Quaternion.LookRotation(direction);
 
-        var distance = Vector3.Distance(transform.position, _player.transform.position);
+        var distance = Vector3.Distance(transform.position, Player.transform.position);
 
         // Déplacement
         if (distance > Stats.AttackRange) {
             _animator.SetBool("isMoving", true);
             transform.position += Time.deltaTime * Stats.MoveSpeed * direction.normalized;
-        } else // Attack
-          {
+        } else {
             Attaquer();
         }
 
@@ -53,7 +51,7 @@ public class Ennemy : MonoBehaviour {
         _lastAttackTime = Time.time + Stats.AttackSpeed;
 
         _animator.SetBool("isAttacking", true);
-        _player.Stats.Health -= Stats.Strength;
+        Player.Health -= Stats.Strength;
     }
 
     // Fais spawn une orbe d'XP à sa mort
