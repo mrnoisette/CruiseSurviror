@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8649170b6c43fb4994cf8222dd4dc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 6677296965666705519, guid: 5db6bc633c6c75b4fb292662b8411672, type: 3}
   _bombe_Prefab: {fileID: 3299822734098222253, guid: 21d781a31cbe1cc4a805bda4b291cc48, type: 3}
   DiametreExplosion: 3
   Degat: 20

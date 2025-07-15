@@ -79,6 +79,10 @@ PrefabInstance:
       value: Aura_Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 4693560523942725979, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
+      propertyPath: Degat
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693560523942725979, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 6677296965666705519}
@@ -190,6 +194,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 17076ae5044e45c459ba01ebe4a6ef62, type: 2}
     - target: {fileID: 919132149155446097, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03f3488ea39deb247a8047264f44d091, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

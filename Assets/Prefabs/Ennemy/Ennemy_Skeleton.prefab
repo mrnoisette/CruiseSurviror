@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ennemy: {fileID: 5383873442024321137}
-  _camera: {fileID: 0}
+  _camera: {fileID: 1062952709352594850, guid: afa71ecdfe036c440b33642206774252, type: 3}
   _slider_Health: {fileID: 8238046579811572653}
 --- !u!1 &957736135889585867
 GameObject:
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stats: {fileID: 11400000, guid: b0dd7873f41eea047a4922266787542a, type: 2}
   _animator: {fileID: 4887232475838699825}
-  _player: {fileID: 0}
+  _player: {fileID: 6677296965666705519, guid: 5db6bc633c6c75b4fb292662b8411672, type: 3}
   _collectableXp: {fileID: 7056778559048798574, guid: e07596e9cd9532f479c1d893c9c05cc3, type: 3}
 --- !u!95 &4887232475838699825
 Animator:

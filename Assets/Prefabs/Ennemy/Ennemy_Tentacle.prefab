@@ -171,6 +171,7 @@ MonoBehaviour:
   Stats: {fileID: 11400000, guid: 919c7bc0d87cf44408e0ff39099eff41, type: 2}
   _animator: {fileID: 4445082265164232405}
   _player: {fileID: 0}
+  _collectableXp: {fileID: 7056778559048798574, guid: e07596e9cd9532f479c1d893c9c05cc3, type: 3}
 --- !u!54 &1131370434820496264
 Rigidbody:
   m_ObjectHideFlags: 0

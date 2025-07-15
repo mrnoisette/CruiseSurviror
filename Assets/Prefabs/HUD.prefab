@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d365d43a6bc23f428d715c7d6672bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 6677296965666705519, guid: 5db6bc633c6c75b4fb292662b8411672, type: 3}
   _slider_Health: {fileID: 1742503054779695281}
   _slider_XP: {fileID: 8183350938754582926}
   _txt_Level: {fileID: 3607066841801584647}

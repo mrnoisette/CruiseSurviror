@@ -15,14 +15,14 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         _slider_Health.maxValue = _player.Stats.Health;
-        _slider_XP.maxValue = _player.Stats.Xp;
+        _slider_XP.maxValue = 100;
     }
 
     private void LateUpdate()
     {
         _slider_Health.value = _player.Stats.Health;
         _slider_XP.value = _player.Stats.Xp;
-        _txt_Level.text = $"Level : {_player.Stats.Xp.ToString()}";
+        _txt_Level.text = $"Level : {_player.Stats.Xp}";
         _txt_Chrono.text = Math.Round(Time.timeSinceLevelLoad,2).ToString();
     }
 }

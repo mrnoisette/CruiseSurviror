@@ -429,9 +429,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1810475522}
     - target: {fileID: 4920169771952071462, guid: 8c3bbcca059705d4297be2b0f9b93201, type: 3}
+      propertyPath: _tabEnnemy.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920169771952071462, guid: 8c3bbcca059705d4297be2b0f9b93201, type: 3}
       propertyPath: '_tabEnnemy.Array.data[0]'
       value: 
       objectReference: {fileID: 32975263}
+    - target: {fileID: 4920169771952071462, guid: 8c3bbcca059705d4297be2b0f9b93201, type: 3}
+      propertyPath: '_tabEnnemy.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

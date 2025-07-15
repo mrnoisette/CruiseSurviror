@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     [SerializeField] private Player _player;
-    [SerializeField] private GameObject[] _tabEnnemy; // Skeletons, tentacles, etc.
+    [SerializeField] private GameObject _ennemy; 
     [SerializeField] private float minSpawnDistance = 15f;
     [SerializeField] private float maxSpawnDistance = 30f;
     [SerializeField] private float spawnInterval = 1f;
@@ -21,11 +21,6 @@ public class GameManager : MonoBehaviour {
     }
 
     private void EnnemySpawner() {
-        if (_tabEnnemy.Length == 0 || _player == null)
-            return;
-
-        // Prefab aléatoire parmis ceux dispo 
-        GameObject selectedEnemy = _tabEnnemy[Random.Range(0, _tabEnnemy.Length)];
 
         // Position aléatoire autour du player (entre les min et max)
         Vector2 direction = Random.insideUnitCircle.normalized;
@@ -35,6 +30,6 @@ public class GameManager : MonoBehaviour {
         spawnPosition.y = 0f;
 
         // Instance de l'ennemy
-        Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
+        Instantiate(_ennemy, spawnPosition, Quaternion.identity);
     }
 }
