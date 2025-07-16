@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Animator Animator;
-
+    [SerializeField] private Rigidbody _rigidbody;
     public EventHandler Event_LevelUp;
 
     public int Health;
@@ -24,8 +24,37 @@ public class Player : MonoBehaviour {
     public int MoveSpeed;
 
     void Update() {
+
+        Mouvement();
+
         if (Health <= 0) {
             Mourrir();
+        }
+    }
+
+    private void Mouvement() {
+        bool isMoving = EnDeplacement();
+
+        // Animations
+        Animator.SetBool("isMoving", EnDeplacement());
+
+        // Regard
+        if (isMoving) {
+            transform.rotation = Quaternion.LookRotation(_rigidbody.linearVelocity);
+        }
+
+        // On applique à la vélocité du joueur (normalisée car ca allait plus vite en diagonale)
+        var direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        direction.Normalize();
+
+        _rigidbody.linearVelocity = direction * MoveSpeed;
+    }
+
+    private bool EnDeplacement() {
+        if (_rigidbody.linearVelocity.sqrMagnitude > 0.1) {
+            return true;
+        } else {
+            return false;
         }
     }
 

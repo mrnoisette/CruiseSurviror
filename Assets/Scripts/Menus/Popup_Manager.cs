@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-public class Menu_Manager : MonoBehaviour {
+public class Popup_Manager : MonoBehaviour {
 
-    [SerializeField] private GameObject _menu_GameOver;
-    [SerializeField] private GameObject _menu_LevelUp;
+    [SerializeField] private GameObject _popup_GameOver;
+    [SerializeField] private GameObject _popup_LevelUp;
 
     [SerializeField] private Player _player;
 
@@ -21,13 +21,13 @@ public class Menu_Manager : MonoBehaviour {
     public void VerifPlayerVivant() {
         if (_player.Health <= 0) {
             // Afficher ecran GameOver
-            _menu_GameOver.gameObject.SetActive(true);
+            _popup_GameOver.gameObject.SetActive(true);
         }
 
     }
 
     public void LevelUp(object sender, EventArgs e) {
-        _menu_LevelUp.gameObject.SetActive(true);
+        _popup_LevelUp.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 

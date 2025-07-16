@@ -1,50 +1,37 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SphereCollider))]
-public class ProjectileChercheur : MonoBehaviour
-{
-    // ────────────────────────── RÉGLAGES DE DÉPLACEMENT ─────────────────────
+public class ProjectileChercheur : MonoBehaviour {
 
-    [Header("Déplacement")]
     public float vitesse = 30f;
     public float vitesseRotation = 720f;
     public float porteeMax = 120f;
 
-    // ────────────────────────── RÉGLAGES DE COMBAT ─────────────────────────
-    
-    [Tooltip("Dégâts infligés à l’impact")]
     public int degats = 10;
 
-    // ────────────────────────── VARIABLES INTERNES ─────────────────────────
+    private Vector3 positionDepart;
+    private Transform cibleActuelle;
 
-    private Vector3  positionDepart;
-    private Transform cibleActuelle;  
-
-    // ────────────────────────── MÉTHODES UNITY ─────────────────────────────
-
-    private void Start()
-    {
+    private void Start() {
         positionDepart = transform.position;
-        cibleActuelle  = TrouverEnnemiLePlusProche();
+        cibleActuelle = TrouverEnnemiLePlusProche();
 
         // S’oriente instantanément vers la cible trouvée si elle existe
         if (cibleActuelle) transform.LookAt(cibleActuelle);
     }
 
-    private void Update()
-    {
+    private void Update() {
         // Si la cible disparaît (morte ou détruite), on en cherche une autre
         if (cibleActuelle == null)
             cibleActuelle = TrouverEnnemiLePlusProche();
 
         // Tourner progressivement vers la cible
-        if (cibleActuelle != null)
-        {
-            Vector3 direction   = (cibleActuelle.position - transform.position).normalized;
-            float   pasRotation = vitesseRotation * Mathf.Deg2Rad * Time.deltaTime;
+        if (cibleActuelle != null) {
+            Vector3 direction = (cibleActuelle.position - transform.position).normalized;
+            float pasRotation = vitesseRotation * Mathf.Deg2Rad * Time.deltaTime;
 
             Vector3 dirModifiee = Vector3.RotateTowards(transform.forward, direction, pasRotation, 0f);
-            transform.rotation  = Quaternion.LookRotation(dirModifiee);
+            transform.rotation = Quaternion.LookRotation(dirModifiee);
         }
 
         // Avancer
@@ -55,37 +42,30 @@ public class ProjectileChercheur : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // ────────────────────────── MÉTHODES PRIVÉES ───────────────────────────
-    
-    private Transform TrouverEnnemiLePlusProche()
-    {
+    private Transform TrouverEnnemiLePlusProche() {
         GameObject[] ennemis = GameObject.FindGameObjectsWithTag("Ennemy");
 
         Transform ennemiPlusProche = null;
-        float distanceMinCarree    = float.MaxValue;
-        Vector3 position           = transform.position;
+        float distanceMinCarree = float.MaxValue;
+        Vector3 position = transform.position;
 
-        foreach (GameObject go in ennemis)
-        {
-            float distanceCarree  = (go.transform.position - position).sqrMagnitude;
-            if (distanceCarree  < distanceMinCarree)
-            {
-                distanceMinCarree = distanceCarree ;
-                ennemiPlusProche  = go.transform;
+        foreach (GameObject go in ennemis) {
+            float distanceCarree = (go.transform.position - position).sqrMagnitude;
+            if (distanceCarree < distanceMinCarree) {
+                distanceMinCarree = distanceCarree;
+                ennemiPlusProche = go.transform;
             }
         }
         return ennemiPlusProche;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
         // Ignore le joueur et les autres projectiles chercheurs
         if (other.CompareTag("Player") || other.GetComponent<ProjectileChercheur>() != null)
             return;
 
         // Applique les dégâts si on touche un ennemi
-        if (other.CompareTag("Ennemy"))
-        {
+        if (other.CompareTag("Ennemy")) {
             Ennemy ennemi = other.GetComponent<Ennemy>();
             if (ennemi != null) ennemi.Stats.Health -= degats;
         }
