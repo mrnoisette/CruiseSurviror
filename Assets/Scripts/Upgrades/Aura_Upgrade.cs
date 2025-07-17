@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Aura : MonoBehaviour {
+public class Aura_Upgrade : MonoBehaviour {
 
     [SerializeField] private Player _player;
     [SerializeField] private GameObject _requin_Prefab;

@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Tir : MonoBehaviour {
+public class Tir_Upgrade : MonoBehaviour {
 
     [SerializeField] private Player _player;
-    [SerializeField] private GameObject _projectile_Prefab;
+     public GameObject _projectile_Prefab;
 
     public float FrequenceTir = 0.4f;
     public float VitesseProjectile = 10f;

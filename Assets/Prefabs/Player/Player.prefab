@@ -10,11 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5178530999074854636, guid: 96ec620340044224fb88e9ecfa8249cf, type: 3}
       propertyPath: m_Name
-      value: Bombe_Upgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 5178530999074854636, guid: 96ec620340044224fb88e9ecfa8249cf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Mine_Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5824574953870263259, guid: 96ec620340044224fb88e9ecfa8249cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -60,10 +56,6 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 6677296965666705519}
-    - target: {fileID: 6832569123688405580, guid: 96ec620340044224fb88e9ecfa8249cf, type: 3}
-      propertyPath: FrequenceSpawn
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85,14 +77,6 @@ PrefabInstance:
     - target: {fileID: 3078447109123468895, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
       propertyPath: m_Name
       value: Aura_Upgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 3078447109123468895, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693560523942725979, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
-      propertyPath: Degat
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693560523942725979, guid: bbc13b7046863954a8df6dafe6b764c1, type: 3}
       propertyPath: _player
@@ -200,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tir_Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 5057024849215230001, guid: 4534886c1c3aefc4e91037b8bab6ea41, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 6677296965666705519}
     - target: {fileID: 7807649253902926238, guid: 4534886c1c3aefc4e91037b8bab6ea41, type: 3}
       propertyPath: _player
       value: 

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6371278283560157653
 Transform:
   m_ObjectHideFlags: 0
@@ -47,6 +47,6 @@ MonoBehaviour:
   _player: {fileID: 0}
   _requin_Prefab: {fileID: 318461815814622372, guid: b46a250a86b3a634aaedab41dc322ea3, type: 3}
   Diametre: 5
-  Degat: 10
+  Degat: 2
   AttackSpeed: 2
   NbRequin: 4

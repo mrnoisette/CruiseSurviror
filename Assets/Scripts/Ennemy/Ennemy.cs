@@ -1,10 +1,11 @@
 using UnityEngine;
 
 public class Ennemy : MonoBehaviour {
+
+    public Player Player;
     public EnnemyStats Stats;
 
     [SerializeField] private Animator _animator;
-    public Player Player;
     [SerializeField] private GameObject _collectableXp;
 
     void Start() {

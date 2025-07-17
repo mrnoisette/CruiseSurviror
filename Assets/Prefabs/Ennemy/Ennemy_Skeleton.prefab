@@ -987,9 +987,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346229cf48f032f468b6eef0c21489a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   Stats: {fileID: 11400000, guid: b0dd7873f41eea047a4922266787542a, type: 2}
   _animator: {fileID: 4887232475838699825}
-  _player: {fileID: 0}
+  _audioSource: {fileID: 0}
+  _soundEffect: {fileID: 8300000, guid: 81dabeefe2466f848987c3465fe05d70, type: 3}
   _collectableXp: {fileID: 7056778559048798574, guid: e07596e9cd9532f479c1d893c9c05cc3, type: 3}
 --- !u!95 &4887232475838699825
 Animator:
