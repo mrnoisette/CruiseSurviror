@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mine : MonoBehaviour {
@@ -21,5 +20,5 @@ public class Mine : MonoBehaviour {
         }
     }
 
-  
+
 }

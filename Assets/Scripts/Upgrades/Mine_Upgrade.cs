@@ -21,7 +21,7 @@ public class Mine_Upgrade : MonoBehaviour {
 
     private void BombSpawner() {
         Vector3 spawnPosition = _player.transform.position + Vector3.up * 0.2f;
-        Quaternion rotation = _bombe_Prefab.transform.rotation; 
+        Quaternion rotation = _bombe_Prefab.transform.rotation;
         var bombe = Instantiate(_bombe_Prefab, spawnPosition, rotation);
     }
 

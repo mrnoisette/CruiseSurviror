@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class Collectable_Xp : MonoBehaviour
-{
+public class Collectable_Xp : MonoBehaviour {
 
     public int XpGain;
 
