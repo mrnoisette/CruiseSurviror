@@ -25,11 +25,13 @@ public class Player : MonoBehaviour {
 
     void Update() {
 
-        Mouvement();
-
         if (Health <= 0) {
             Mourrir();
+            return;
         }
+        Mouvement();
+
+     
     }
 
     private void Mouvement() {

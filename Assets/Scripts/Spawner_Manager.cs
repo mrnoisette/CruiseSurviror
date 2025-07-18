@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Spawner_Manager : MonoBehaviour {
@@ -38,6 +37,6 @@ public class Spawner_Manager : MonoBehaviour {
         ennemy.GetComponent<Ennemy>().Player = _player;
     }
 
-   
+
 
 }
